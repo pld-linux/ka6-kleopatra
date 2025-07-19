@@ -20,8 +20,7 @@ BuildRequires:	Qt6Network-devel >= 5.11.1
 BuildRequires:	Qt6Widgets-devel
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-tools
-BuildRequires:	gpgme-c++-devel >= 1.23.2
-BuildRequires:	gpgme-qt6-devel >= 1.23.2
+BuildRequires:	gpgmepp-devel >= 1.23.2
 BuildRequires:	ka6-kmime-devel >= %{kdeappsver}
 BuildRequires:	ka6-libkleo-devel >= %{kdeappsver}
 BuildRequires:	ka6-mimetreeparser-devel >= %{kdeappsver}
@@ -42,6 +41,7 @@ BuildRequires:	kf6-kxmlgui-devel >= %{kframever}
 BuildRequires:	libassuan-devel >= 2.4.2
 BuildRequires:	libgpg-error-devel >= 1.36
 BuildRequires:	ninja
+BuildRequires:	qgpgme-qt6-devel >= 1.23.2
 BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	tar >= 1:1.22
