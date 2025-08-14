@@ -1,22 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.04.3
+%define		kdeappsver	25.08.0
 %define		kframever	6.13.0
 %define		qtver		6.8
 %define		kaname		kleopatra
 Summary:	GUI for GnuPG
 Name:		ka6-%{kaname}
-Version:	25.04.3
-Release:	2
+Version:	25.08.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	9de4769072df2c467767c93b5f2008cb
+# Source0-md5:	92b0e7a4c30e62462dc2dbf13206b3e3
 URL:		http://www.kde.org/
-Patch0:		kleopatra-25.04.2-gpgmepp-2.0.0-0.patch
-Patch1:		kleopatra-25.04.2-gpgmepp-2.0.0-1.patch
-Patch2:		kleopatra-25.04.2-gpgmepp-2.0.0-2.patch
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
 BuildRequires:	Qt6Network-devel >= 5.11.1
@@ -58,9 +55,6 @@ Kleopatra is a GUI for GnuPG.
 
 %prep
 %setup -q -n %{kaname}-%{version}
-%patch -P0 -p1
-%patch -P1 -p1
-%patch -P2 -p1
 
 %build
 %cmake \
