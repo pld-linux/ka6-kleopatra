@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.3
+%define		kdeappsver	25.12.0
 %define		kframever	6.13.0
 %define		qtver		6.8
 %define		kaname		kleopatra
 Summary:	GUI for GnuPG
 Name:		ka6-%{kaname}
-Version:	25.08.3
-Release:	2
+Version:	25.12.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	9ee80a54d99c21acf5d4429eca2d2800
+# Source0-md5:	6b574e748f9d3bc4232ae12fe630f0e6
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
