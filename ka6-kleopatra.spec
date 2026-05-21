@@ -54,6 +54,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Kleopatra is a GUI for GnuPG.
 
+%description -l pl.UTF-8
+Kleopatra to GUI do GnuPG.
+
 %package data
 Summary:	Data files for %{kaname}
 Summary(pl.UTF-8):	Dane dla %{kaname}
