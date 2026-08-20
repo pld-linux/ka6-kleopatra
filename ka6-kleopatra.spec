@@ -1,19 +1,20 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.04.3
-%define		kframever	6.13.0
+%define		kdeappsver	26.08.0
+%define		kframever	6.29.0
 %define		qtver		6.8
 %define		kaname		kleopatra
 Summary:	GUI for GnuPG
 Name:		ka6-%{kaname}
-Version:	26.04.3
+Version:	26.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	efcb60b6bcbff389c65ebcf6027e01d2
+# Source0-md5:	4a5b7f04d297c2d4ac39d07a50b2ba23
 URL:		http://www.kde.org/
+BuildRequires:	KDSingleApplication-devel >= 1.2.1
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
 BuildRequires:	Qt6Network-devel >= 5.11.1
@@ -21,7 +22,6 @@ BuildRequires:	Qt6Widgets-devel
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-tools
 BuildRequires:	gpgmepp-devel >= 1.23.2
-BuildRequires:	ka6-kmime-devel >= %{kdeappsver}
 BuildRequires:	ka6-libkleo-devel >= %{kdeappsver}
 BuildRequires:	ka6-mimetreeparser-devel >= %{kdeappsver}
 BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
@@ -34,6 +34,7 @@ BuildRequires:	kf6-ki18n-devel >= %{kframever}
 BuildRequires:	kf6-kiconthemes-devel >= %{kframever}
 BuildRequires:	kf6-kio-devel >= %{kframever}
 BuildRequires:	kf6-kitemmodels-devel >= %{kframever}
+BuildRequires:	kf6-kmime-devel >= %{kframever}
 BuildRequires:	kf6-knotifications-devel >= %{kframever}
 BuildRequires:	kf6-kwidgetsaddons-devel >= %{kframever}
 BuildRequires:	kf6-kwindowsystem-devel >= %{kframever}
